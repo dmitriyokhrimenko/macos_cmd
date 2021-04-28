@@ -4,3 +4,8 @@
 ```bash
 pg_ctl -D /usr/local/var/postgres start
 ```
+
+### Login to psql
+```bash
+psql -d mydb -U myuser
+```
