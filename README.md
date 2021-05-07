@@ -9,3 +9,8 @@ pg_ctl -D /usr/local/var/postgres start
 ```bash
 psql -d mydb -U myuser
 ```
+
+### Create user in psql
+```bash
+sudo -u postgres createuser <username>
+```
