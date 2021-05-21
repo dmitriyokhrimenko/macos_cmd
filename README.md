@@ -14,3 +14,9 @@ psql -d mydb -U myuser
 ```bash
 sudo -u postgres createuser <username>
 ```
+
+### Unblock postgres service
+```bash
+rm /usr/local/var/postgres/postmaster.pid
+brew services restart postgresql
+```
