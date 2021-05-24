@@ -17,3 +17,4 @@ artifacts:
   files:
     - README.md
     - appspec.yml
+    - buildspec.yml
