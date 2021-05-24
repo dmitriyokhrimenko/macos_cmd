@@ -5,8 +5,6 @@ files:
     destination: /home/ubuntu/app
 permissions:
   - object: /home/ubuntu/app
-    owner: ubuntu
-    group: ubuntu
     type:
       - directory
       - file
