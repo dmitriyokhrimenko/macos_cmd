@@ -5,6 +5,8 @@ files:
     destination: /home/ubuntu/app
 permissions:
   - object: /home/ubuntu/app
+  - user: ec2-user
+  - group: ec2-user
     type:
       - directory
       - file
