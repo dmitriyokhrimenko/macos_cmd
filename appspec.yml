@@ -3,9 +3,4 @@ os: linux
 files:
   - source: /
     destination: /home/ubuntu/app
-permissions:
-  - object: /home/ubuntu/app
-    type:
-      - directory
-      - file
 
