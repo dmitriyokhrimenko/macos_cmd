@@ -34,6 +34,10 @@ jobs:
         deploy-group: ['dev']
     needs: test
     steps:
+      - name: pwd
+        run: pwd
+      - name: ls -ls
+        run: ls -la
       # copying appspec file
       - name: Copying appspec.yml
         run: cp appspec.yml ./
