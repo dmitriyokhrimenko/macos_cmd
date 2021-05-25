@@ -32,7 +32,7 @@ jobs:
         s3-bucket: ['ryde-codedeploy-deployments']
         s3-filename: ['develop-aws-codedeploy-${{ github.sha }}']
         deploy-group: ['dev']
-    needs: test
+#     needs: test
     steps:
       - name: pwd
         run: pwd
