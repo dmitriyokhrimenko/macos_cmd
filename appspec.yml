@@ -1,6 +1,19 @@
+
 version: 0.0
 os: linux
 files:
   - source: /
-    destination: /home/ec2-user/test
+    destination: /home/ubuntu/server
 
+permissions:
+  - object: /home/ubuntu/server
+    owner: ubuntu
+    group: ubuntu
+    type:
+      - directory
+      - file
+hooks:
+  ApplicationStart:
+    - location: deploy/scripts/start_app.sh
+      timeout: 300
+      runas: ubuntu
