@@ -3,25 +3,25 @@ name: Dev
 on: workflow_dispatch
 
 jobs:
-  test:
+#   test:
 
-    runs-on: ubuntu-latest
+#     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [12.x]
+#     strategy:
+#       matrix:
+#         node-version: [12.x]
 
-    steps:
-      - uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node-version }}
-      - name: npm install and test
-        run: |
-          npm install
-        env:
-          CI: true
+#     steps:
+#       - uses: actions/checkout@v2
+#       - name: Use Node.js ${{ matrix.node-version }}
+#         uses: actions/setup-node@v1
+#         with:
+#           node-version: ${{ matrix.node-version }}
+#       - name: npm install and test
+#         run: |
+#           npm install
+#         env:
+#           CI: true
           
   deploy:
     name: CD part
@@ -37,7 +37,7 @@ jobs:
       - name: pwd
         run: pwd
       - name: ls -ls
-        run: ls -la
+        run: cd ../ && ls -la
       # copying appspec file
       - name: Copying appspec.yml
         run: cp appspec.yml ./
