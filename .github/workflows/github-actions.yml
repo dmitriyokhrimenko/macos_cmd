@@ -34,6 +34,9 @@ jobs:
         deploy-group: ['dev']
     needs: test
     steps:
+      # copying appspec file
+      - name: Copying appspec.yml
+        run: cp appspec.yml ./
       # Install AWS CLI 2
       - name: Install AWS CLI 2
         run: |
