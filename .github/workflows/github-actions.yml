@@ -33,6 +33,7 @@ jobs:
         deploy-group: ['dev']
     needs: test
     steps:
+      - uses: actions/checkout@v2
       # copying appspec file
       - name: ls -la
         run: ls -la
