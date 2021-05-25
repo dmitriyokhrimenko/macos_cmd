@@ -22,6 +22,21 @@ jobs:
         env:
           CI: true
           
+  deploy:
+    name: CD part
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        app-name: ['ryde']
+        s3-bucket: ['ryde-codedeploy-deployments']
+        s3-filename: ['develop-aws-codedeploy-${{ github.sha }}']
+        deploy-group: ['dev']
+    needs: test
+    steps:
+      # copying appspec file
+      - name: ls -la
+        run: ls -la
+          
 #   deploy:
 #     name: CD part
 #     runs-on: ubuntu-latest
