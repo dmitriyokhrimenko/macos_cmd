@@ -4,17 +4,10 @@ os: linux
 files:
   - source: /
     destination: /home/ubuntu/server
-
-permissions:
-  - object: /home/ubuntu
-    pattern: "*/server*"
-    owner: ubuntu
-    group: ubuntu
-    type:
-      - directory
-      - file
 hooks:
   ApplicationStart:
     - location: deploy/scripts/start_app.sh
       timeout: 300
       runas: ubuntu
+  AfterInstall:
+      - location: deploy/scripts/set-permissions.sh
