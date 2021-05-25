@@ -27,7 +27,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        app-name: ['ryde']
+        app-name: ['Ryde']
         s3-bucket: ['ryde-codedeploy-deployments']
         s3-filename: ['develop-aws-codedeploy-${{ github.sha }}']
         deploy-group: ['dev']
