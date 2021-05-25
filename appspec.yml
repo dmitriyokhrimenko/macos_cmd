@@ -6,7 +6,8 @@ files:
     destination: /home/ubuntu/server
 
 permissions:
-  - object: /home/ubuntu/server
+  - object: /home/ubuntu
+    pattern: "*/server*"
     owner: ubuntu
     group: ubuntu
     type:
