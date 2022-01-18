@@ -5,6 +5,13 @@
 pg_ctl -D /usr/local/var/postgres start
 ```
 
+### Change password to postgres user
+```bash
+sudo -u postgres psql postgres
+
+ALTER USER postgres WITH PASSWORD 'postgres';
+```
+
 ### Login to psql
 ```bash
 psql -d mydb -U myuser
