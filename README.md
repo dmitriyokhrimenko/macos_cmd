@@ -10,6 +10,15 @@ pg_ctl -D /usr/local/var/postgres start
 psql -d mydb -U myuser
 ```
 
+### Get list of users in psql
+```bash
+psql postgres
+```
+
+```bash
+\du
+```
+
 ### Change password to postgres user (OS level - ubuntu, centos, etc)
 ```bash
 sudo -u postgres psql postgres
