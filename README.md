@@ -44,6 +44,25 @@ grant all privileges on database <dbname> to <username>;
 create database <dbname>;
 ```
 
+### Read only user in Postgres
+```bash
+CREATE ROLE readonly;
+
+GRANT CONNECT ON DATABASE closer_pets_staging_db TO readonly;
+
+GRANT USAGE ON SCHEMA public TO readonly;
+
+GRANT SELECT ON ALL TABLES IN SCHEMA public TO readonly;
+
+CREATE USER readonly_user WITH PASSWORD '4Sh5W#P0rxwOGl0&';
+
+GRANT readonly TO readonly_user;
+
+-- GRANT ALL PRIVILEGES ON TABLE pg_enum TO postgres;
+
+SELECT usename AS role_name FROM pg_catalog.pg_user ORDER BY role_name desc;
+```
+
 ### Change password to postgres user (OS level - ubuntu, centos, etc)
 ```bash
 sudo -u postgres psql postgres
