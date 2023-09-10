@@ -15,8 +15,11 @@ psql -d mydb -U myuser
 psql postgres
 ```
 
+### Create user in postgres throught the psql console
 ```bash
-\du
+CREATE ROLE verter WITH LOGIN PASSWORD 'password';
+
+ALTER ROLE verter CREATEDB;
 ```
 
 ### Create user in psql throught the OS cmd
